@@ -3,14 +3,17 @@ import java.util.Scanner;
 public class tugas1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Boolean isLengthMatch = false, isFormatMatch = false, isEmailStatus = true;
+        Boolean isLengthMatch = false, isFormatMatch = false, isEmailStatus = false, isTlpStatus = false;
         int isEmailLength;
         String nim = "", email = "", nama, tlp;
         System.out.print("Masukan Nama : ");
         nama = input.next();
-        System.out.print("Masukan No.Telpon : ");
-        tlp = input.next();
         do {
+            System.out.print("Masukan No.Telpon : ");
+            tlp = input.next();
+            if(!tlp.matches("[^a-zA-Z, \s]"))
+                isTlpStatus = true;
+
             System.out.print("Masukan Email : ");
             email = input.next();
             isEmailLength = email.length();
@@ -21,10 +24,10 @@ public class tugas1 {
                 System.out.println("Email Harus Menggunakan `@webmail.umm.ac.id`");
             }
             else{
-                isEmailStatus = false;
+                isEmailStatus = true;
             }
         }
-        while(isEmailStatus);
+        while(!(isEmailStatus && isTlpStatus));
 
         do {
             try {
@@ -50,6 +53,5 @@ public class tugas1 {
         } 
         while(!(isLengthMatch && isFormatMatch));
         System.out.println("\nData Berhasil Ditambahkan : \nNIM Mahasiswa : "+nim+"\nNama Mahasiswa : "+nama+"\nNo Telpon : "+tlp+"\nEmail : "+email);
-        // System.out.println("Nim Anda '"+nim+"' Telah Berhasil Ditambah");
     }
 }

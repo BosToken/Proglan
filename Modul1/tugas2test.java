@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import FormatCodeException;
 import LengthCodeException;
-public class tugas2Backup {
+public class tugas2test {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Boolean isLengthMatch = false, isFormatMatch = false;
