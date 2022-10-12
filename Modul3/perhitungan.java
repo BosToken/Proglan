@@ -1,31 +1,22 @@
-public class perhitungan{
-    public int sisi;
+public class perhitungan {
+    // void perhitungan(){
+    //     int panjang = sisi.getPanjang();
+    //     int lebar = sisi.getLebar();
+    //     int tinggi = sisi.getTinggi();
+    //     luas = panjang * lebar * tinggi;
 
-    public int getPanjang() {
-        return 0;
+    //     int panjangV = sisi.getPanjang();
+    //     int lebarV = sisi.getLebar();
+    //     int tinggiV = sisi.getTinggi();
+    //     volume = 4 * panjangV * lebarV * tinggiV;
+    // }
+
+    public int luas(balok sisi){
+        return (2 * (sisi.getPanjang() * sisi.getLebar()) + (sisi.getLebar() * sisi.getTinggi()) + (sisi.getPanjang() * sisi.getTinggi()));
     }
 
-    public int getLebar() {
-        return 0;
-    }
-
-    public int getTinggi() {
-        return 0;
-    }
-
-    int luas(balok balok){
-        return getPanjang() * getLebar() * getTinggi();
-    }
-    
-    public String volume(balok balok) {
-        return null;
-    }
-
-    void perhitungan(){
-        // int panjang = sisi.getPanjang();
-        // int lebar = sisi.getLebar();
-        // int tinggi = sisi.getTinggi();
-        // luas = panjang * lebar * tinggi;
+    public int volume(balok sisi){
+        return sisi.getPanjang() * sisi.getTinggi() * sisi.getLebar();
     }
 
 }

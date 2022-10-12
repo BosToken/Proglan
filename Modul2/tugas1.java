@@ -11,7 +11,7 @@ public class tugas1 {
         do {
             System.out.print("Masukan No.Telpon : ");
             tlp = input.next();
-            if(!tlp.matches("[^a-zA-Z, \s]"))
+            if(tlp.matches("[0-9]*"))
                 isTlpStatus = true;
 
             System.out.print("Masukan Email : ");

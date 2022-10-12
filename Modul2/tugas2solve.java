@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class tugas2solve{
 
     public static String[][] book = new String[10][100];
-    public static String place[][] = new String[1][10];
+    public static String place[][] = new String[5][10];
 
     void cekDate( int date){
         if (date < 2018 || date > 2022){
@@ -40,8 +40,7 @@ public class tugas2solve{
         place[0][1] = "Bandung";
         place[0][2] = "Surabaya";
 
-
-        tugas2 Objct = new tugas2();
+        tugas2solve Objct = new tugas2solve();
         String inName, inFrom;
         int inIndex = 1, inDate;
         Scanner input = new Scanner(System.in);

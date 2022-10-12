@@ -1,5 +1,5 @@
 public class tugas2{
-    void cekName( char name), cekFrom( char from), cekDate( int date), list();
+    void cekName( String inName), cekFrom( char from), cekDate( int date), list();
 
     String book[10][100] = {{"This is Book, Malang. 2022"}};
     String place[][10] = {{"Malang"}, {"Bandung"}, {"Surabaya"}};
@@ -10,9 +10,9 @@ public class tugas2{
         }
     }
 
-    void cekFrom( char from){
+    void cekFrom( String inFrom){
         for(int i = 0; place[i][0] != '\0'; i++){
-            if(from.compareTo(place[i]) == 0 ){
+            if(inFrom.compareTo(place[i]) == 0 ){
                 return i;
             }
         }
